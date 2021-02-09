@@ -28,13 +28,26 @@ public class Player {
         return name;
     }
 
+    public String getGoals() {
+        return goals;
+    }
+
+    public String getAssists() {
+        return assists;
+    }
+
+
+    public int getScore() {
+        return Integer.valueOf(goals) + Integer.valueOf(assists);
+    }
+
     public String getTeam() {
         return team;
     }
 
     @Override
     public String toString() {
-        return name + " " + team + " G: " + goals + " A: " + assists ;
+        return name + " " + team + " G:" + goals + " A:" + assists + " = " + getScore();
     }
       
 }
