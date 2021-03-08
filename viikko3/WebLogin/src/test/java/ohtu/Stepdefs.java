@@ -53,6 +53,11 @@ public class Stepdefs {
     public void systemWillRespond(String pageContent) throws Throwable {
         assertTrue(driver.getPageSource().contains(pageContent));
     }
+
+    @When("nonexisting username {string} and password {string} are given")
+    public void nonExistingUsernameAndPasswordAreGiven(String username, String password) throws Throwable {
+        logInWith(username, password);
+    } 
     
     @After
     public void tearDown(){
